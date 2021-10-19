@@ -1,19 +1,19 @@
 {
   "files": {
+    "commands/musicsvell/skip.js": [
+      {
+        "id": "d6f9d6ff-5162-4bf7-b376-d8678a3aac57",
+        "line": 10,
+        "version": 60,
+        "index": 301
+      }
+    ],
     "config.json": [
       {
         "id": "e4cf428f-1006-40ab-ac81-b91c9cd6ca64",
         "line": 3,
         "version": 29,
         "index": 22
-      }
-    ],
-    "index.js": [
-      {
-        "id": "705ac5c4-8716-440e-83bb-f2854dc4d0f3",
-        "line": 65,
-        "version": 928,
-        "index": 1629
       }
     ]
   }

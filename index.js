@@ -15,15 +15,6 @@ bot.onMessage({
   guildOnly: false //make commands work in dms
 });
 
-function getQuote() {
-  return fetch("https://zenquotes.io/api/random")
-    .then(res => {
-      return res.json()
-      })
-    .then(data => {
-      return data[0]["q"] + " -" + data[0]["a"]
-    })
-}
 bot.readyCommand({
     channel: "", //You can use this or not
     code: `$log[Ready on $userTag[$clientID]]` //Example Ready on Client
@@ -39,13 +30,12 @@ bot.musicStartCommand({
 
 bot.musicEndCommand({
     channel: "$channelID",
-    code: `
-    $sendMessage[{description: I'm leaving the Voice Channel since no one is playing music anymore}{delete:5s};no]`
+   // code: `$sendMessage[{description: I'm leaving the Voice Channel since no one is playing music anymore}{delete:5s};no]`
+   code: `The queue ended`
 });
 
-
 bot.status ({
- text: "Isvell: Isvellization",
+ text: "Isvell: Maintenancesvell",
  type: "PLAYING",
  time: 10
 });
