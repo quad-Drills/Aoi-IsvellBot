@@ -2,12 +2,13 @@ module.exports=[{
  name:"fight",
  code: `
  $if[$getVar[challenger1]!=none]
- Someone is already registered $getVar[challenger1]
  $if[$getVar[challenger1]==$userTag[$authorId]]
  You cancelled the registration
+  $setVar[challenger1;none]
  $elseif[$getVar[challenger1]!=$userTag[$authorId]]
-
  $setVar[challenger1;none]
+ $getVar[challenger1] is to fight $userTag[$authorId]
+$endElseIf
  $endif
  $else
  You register yourself $setVar[challenger1;$userTag[$authorId]]
@@ -21,7 +22,7 @@ module.exports=[{
 },{
   name:"setme",
   code:`
-  $author[You set yourself as the variable]
+  $author[You set yourself as the variable $getVar[challenger1]]
   $setVar[challenger1;$userTag[$authorId]]
   `
 },{
