@@ -47,6 +47,10 @@ bot.command({
 
 bot.loadCommands('./commands')
 
+bot.variables({
+  challenger1: "none",
+  challenger2: ""
+})
 const http = require('http');
 const server = http.createServer((req, res) => {
   res.writeHead(200);

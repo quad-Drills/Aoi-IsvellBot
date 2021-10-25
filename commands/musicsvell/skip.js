@@ -7,4 +7,4 @@ module.exports ={
     $onlyIf[$queueLength>0;{color:RANDOM}{description:The queue is empty!}]
     $onlyIf[$checkContains[$channelType;text;news]==true;
  `  
-}
+} 
