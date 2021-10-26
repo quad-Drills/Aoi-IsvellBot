@@ -35,14 +35,22 @@ bot.musicEndCommand({
 });
 
 bot.status ({
- text: "Isvell: Maintenancesvell",
+ text: "Isvell: Developingsvell",
  type: "PLAYING",
  time: 10
 });
 
 bot.command({
   name: "ping", //Trigger name (command name)
-  code: `Pong! $pingms` //Code
+  code: `Pong! $pingms
+  $author` //Code
+})
+
+bot.awaitedCommand({
+  name:"matchfound",
+  code:`
+  Match found!
+  `
 })
 
 bot.loadCommands('./commands')

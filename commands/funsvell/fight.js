@@ -1,33 +1,42 @@
 module.exports=[{
  name:"fight",
  code: `
- $if[$getVar[challenger1]!=none]
- $if[$getVar[challenger1]==$userTag[$authorId]]
+ $if[$getServerVar[challenger1]!=none]
+ $if[$getServerVar[challenger1]==$userTag[$authorId]]
  You cancelled the registration
-  $setVar[challenger1;none]
- $elseif[$getVar[challenger1]!=$userTag[$authorId]]
- $setVar[challenger1;none]
- $getVar[challenger1] is to fight $userTag[$authorId]
+  $setServerVar[challenger1;none]
+ $elseif[$getServerVar[challenger1]!=$userTag[$authorId]]
+ $setServerVar[challenger1;none]
+ <@$findMember[$getServerVar[challenger1]]> is to fight <@$findMember[$userTag[$authorId]]> . Please proceed to a private channel or a table from now on.
 $endElseIf
  $endif
  $else
- You register yourself $setVar[challenger1;$userTag[$authorId]]
+ <@$findMember[$message]> is looking for a game @here 
+ $setServerVar[challenger1;$userTag[$authorId]]
  $endif
  ` 
 },{
   name:"whoin",
   code:`
-  The variable is $getVar[challenger1]
+  The variable is $getServerVar[challenger1]
+  @$findMember[$getServerVar[challenger1]]
   `
 },{
   name:"setme",
   code:`
-  $author[You set yourself as the variable $getVar[challenger1]]
-  $setVar[challenger1;$userTag[$authorId]]
+  $author[You set yourself as the variable $getServerVar[challenger1]]
+  $setServerVar[challenger1;$userTag[$authorId]]
   `
 },{
   name:"clearin",
   code:`
-  $setVar[challenger1;none]
+  $setServerVar[challenger1;none]
+  `
+},{
+  name:"testwait",
+  code:`
+  $awaitMessages[everyone;10s;!fight;matchfound;Matchmaking timed out $setServerVar[challenger1;"none"]]
+  $setServerVar[challenger1;"justice"]
+  Waiting for command
   `
 }]
