@@ -17,7 +17,7 @@ bot.onMessage({
 
 bot.readyCommand({
     channel: "", //You can use this or not
-    code: `$log[Ready on $userTag[$clientID]]` //Example Ready on Client
+    code: `$log[Ready on $userTag[$clientID]]` 
 });
 
 bot.musicStartCommand({
@@ -30,12 +30,11 @@ bot.musicStartCommand({
 
 bot.musicEndCommand({
     channel: "$channelID",
-   // code: `$sendMessage[{description: I'm leaving the Voice Channel since no one is playing music anymore}{delete:5s};no]`
-   code: `The queue ended`
+   code: `$sendMessage[{description: I'm leaving the Voice Channel since no one is playing music anymore}{delete:5s};no]`
 });
 
 bot.status ({
- text: "Isvell: Developingsvell",
+ text: "Isvell: Isvellization",
  type: "PLAYING",
  time: 10
 });
@@ -65,3 +64,4 @@ const server = http.createServer((req, res) => {
   res.end('ok');
 });
 server.listen(3000);
+

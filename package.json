@@ -14,7 +14,9 @@
     "aoi.js": "^4.5.0",
     "discord.js": "^12.5.3",
     "ffmpeg-static": "^4.4.0",
+    "log4js": "^6.4.4",
     "nekobot-api": "^2.1.0",
-    "node-fetch": "^1.0.0"
+    "node-fetch": "^1.0.0",
+    "ytdl-core": "^4.11.0"
   }
 }

@@ -13,14 +13,9 @@ $endElseIf
  $else
  <@$findMember[$message]> is looking for a game @here 
  $setServerVar[challenger1;$userTag[$authorId]]
+ 
  $endif
  ` 
-},{
-  name:"whoin",
-  code:`
-  The variable is $getServerVar[challenger1]
-  @$findMember[$getServerVar[challenger1]]
-  `
 },{
   name:"setme",
   code:`
