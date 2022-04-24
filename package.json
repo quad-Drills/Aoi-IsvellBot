@@ -1,7 +1,7 @@
 {
   "name": "IsvellBot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Discord Bot made using Aoi.js for personal use.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,12 +11,22 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.6.0",
-    "aoi.js": "^4.5.0",
+    "aoi.js": "^5.1.2",
     "discord.js": "^12.5.3",
     "ffmpeg-static": "^4.4.0",
     "log4js": "^6.4.4",
     "nekobot-api": "^2.1.0",
+    "node": "^16.14.2",
     "node-fetch": "^1.0.0",
     "ytdl-core": "^4.11.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quad-Drills/IsvellBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/quad-Drills/IsvellBot/issues"
+  },
+  "homepage": "https://github.com/quad-Drills/IsvellBot#readme"
 }
